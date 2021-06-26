@@ -173,8 +173,8 @@ class Setting < RailsSettings::Base
   field :topic_index_sidebar_html, default: ""
   field :before_topic_html, default: ""
   field :after_topic_html, default: ""
-  field :ban_reasons, default: "标题或正文描述不清楚", type: :array, separator: /\n+/
-  field :ban_reason_html, default: "此贴因内容原因不符合要求，被管理员屏蔽，请根据管理员给出的原因进行调整"
+  field :ban_reasons, default: "The title or body description is not clear", type: :array, separator: /\n+/
+  field :ban_reason_html, default: "This post did not meet the requirements due to content reasons and was blocked by the administrator."
   field :ban_words_on_reply, default: [], type: :array, separator: /\n+/
   field :ban_words_in_body, default: [], type: :array, separator: /\n+/
   field :newbie_notices, default: ""
