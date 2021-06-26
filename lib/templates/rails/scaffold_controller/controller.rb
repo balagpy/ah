@@ -20,7 +20,7 @@ class <%= controller_class_name %>Controller < <%= controller_class_name.include
     @<%= file_name %> = <%= orm_class.build(file_name.camelize, "params[:#{file_name}].permit!") %>
 
     if @<%= file_name %>.save
-      redirect_to(<%= index_helper %>_path, notice: '<%= human_name %> 创建成功。')
+      redirect_to(<%= index_helper %>_path, notice: '<%= human_name %> Created successfully.')
     else
       render action: "new"
     end
@@ -28,7 +28,7 @@ class <%= controller_class_name %>Controller < <%= controller_class_name.include
 
   def update
     if @<%= file_name %>.update(params[:<%= file_name %>].permit!)
-      redirect_to(<%= index_helper %>_path, notice: '<%= human_name %> 更新成功。')
+      redirect_to(<%= index_helper %>_path, notice: '<%= human_name %> Update completed.')
     else
       render action: "edit"
     end
@@ -36,7 +36,7 @@ class <%= controller_class_name %>Controller < <%= controller_class_name.include
 
   def destroy
     @<%= file_name %>.destroy
-    redirect_to(<%= index_helper %>_path, notice: "删除成功。")
+    redirect_to(<%= index_helper %>_path, notice: "Successfully deleted.")
   end
 
   private
