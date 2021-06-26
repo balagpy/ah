@@ -27,7 +27,7 @@ class TeamUsersController < ApplicationController
     @team_user.actor_id = current_user.id
     @team_user.status = :pendding
     if @team_user.save(context: :invite)
-      redirect_to(user_team_users_path(@team), notice: "邀请成功。")
+      redirect_to(user_team_users_path(@team), notice: "Invitation successful.")
     else
       render action: "new"
     end
@@ -38,7 +38,7 @@ class TeamUsersController < ApplicationController
 
   def update
     if @team_user.update(params.require(:team_user).permit(:role))
-      redirect_to(user_team_users_path(@team), notice: "保存成功")
+      redirect_to(user_team_users_path(@team), notice: "Saved successfully.")
     else
       render action: "edit"
     end
@@ -46,7 +46,7 @@ class TeamUsersController < ApplicationController
 
   def destroy
     @team_user.destroy
-    redirect_to(user_team_users_path(@team), notice: "移除成功")
+    redirect_to(user_team_users_path(@team), notice: "Removed successfully.")
   end
 
   def show
@@ -57,12 +57,12 @@ class TeamUsersController < ApplicationController
 
   def accept
     @team_user.accepted!
-    redirect_to(user_team_users_path(@team), notice: "接受成功，已加入组织")
+    redirect_to(user_team_users_path(@team), notice: "Accepted successfully and joined the organization.")
   end
 
   def reject
     @team_user.destroy
-    redirect_to(user_team_users_path(@team), notice: "已拒绝成功")
+    redirect_to(user_team_users_path(@team), notice: "Successfully rejected.")
   end
 
   private
