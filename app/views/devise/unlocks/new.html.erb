@@ -1,11 +1,11 @@
-<% title_tag '重新发送解锁邮件' %>
+<% title_tag 'Resend unlock email' %>
 
 <div class="row">
   <div class="col"></div>
   <div class="col-md-6">
     <div class="card card-lg">
       <div class="card-body">
-        <div class="card-title">重新发送解锁邮件</div>
+        <div class="card-title">Resend unlock email</div>
 
         <%= form_for resource, as: resource_name, url: unlock_path(resource_name), method: :post do |f| %>
           <%= render "shared/error_messages", target: resource %>
@@ -15,7 +15,7 @@
           </div>
 
           <div class="form-actions">
-            <%= f.submit "重新发送解锁邮件", class: 'btn btn-primary btn-lg btn-block' %>
+            <%= f.submit "Resend unlock email", class: 'btn btn-primary btn-lg btn-block' %>
           </div>
         <% end %>
       </div>
