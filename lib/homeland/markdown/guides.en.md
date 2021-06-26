@@ -14,7 +14,7 @@ This content shows some small formats in the content, such as:
 - _Italic_ - `*Italic*`
 - ~~Strikethrough~~ - `~~Strikethrough~~`
 - `Code` - `\`Code\``
-- [Link](http://github.com) - `[Link](http://github.com)`
+- [Link](http://askhackers.com) - `[Link](http://askhackers.com)`
 - [username@gmail.com](mailto:username@gmail.com) - `[username@gmail.com](mailto:username@gmail.com)`
 
 ### Mention
@@ -122,24 +122,4 @@ Please note that the line breaks of the Markdown source code are left blank.
 
 ### Video
 
-We support Youtube, Vimeo, Youku, BiliBili video insertion, you only need to copy the video playback page, the URL address of the web page in the browser address bar, and paste it into the topic/reply text box. After submission, it will be automatically converted into a video player.
-
-#### For example
-
-**Youtube**
-
-https://www.youtube.com/watch?v=52AMJwF7P0w
-
-**Vimeo**
-
-https://vimeo.com/460511888
-
-**Youku**
-
-https://v.youku.com/v_show/id_XNDU4Mzg4Mjc2OA==.html
-
-**BiliBili**
-
-https://www.bilibili.com/video/BV1uv411B7MK
-
-···
+We support Youtube, Vimeo insertion, you only need to copy the video playback page, the URL address of the web page in the browser address bar, and paste it into the topic/reply text box. After submission, it will be automatically converted into a video player.
