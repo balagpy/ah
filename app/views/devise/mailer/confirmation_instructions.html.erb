@@ -1,5 +1,4 @@
 <p class="lead">Welcome <%= @resource.fullname %></p>
-<p>你已经成功注册 <%= link_to Setting.app_name, root_url %> 的账号，
 <p>You have successfully registered the account of <%= link_to Setting.app_name, root_url %>, 
   Next you need to click on the link below to <span class="text-danger">activate</span> your account:</p>
 <p><%= link_to'Activate account', confirmation_url(@resource, confirmation_token: @token), class:'btn' %></p>
