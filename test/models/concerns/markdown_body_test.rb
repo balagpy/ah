@@ -6,8 +6,8 @@ class MarkdownBodyTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
 
   test "body_html" do
-    topic = Topic.new(body: "各类系统总会或多或少的需要一些**赞、收藏、关注/订阅**等功能。\n\n每次我们都要重新开发么？不！那不是 DRY 的风格。采用 Active Record 多态关联（Polymorphic Association）的方式存储各种类型的动作数据，例如：赞、喜欢、收藏、关注、订阅、屏蔽（靠你的想象，还可以干更多的事情）等等。")
-    assert_html_equal "<p>各类系统总会或多或少的需要一些<strong>赞、收藏、关注/订阅</strong>等功能。</p><p>每次我们都要重新开发么？不！那不是 DRY 的风格。采用 Active Record 多态关联（Polymorphic Association）的方式存储各种类型的动作数据，例如：赞、喜欢、收藏、关注、订阅、屏蔽（靠你的想象，还可以干更多的事情）等等。</p>", topic.body_html
-    assert_equal "各类系统总会或多或少的需要一些赞、收藏、关注/订阅等功能。 每次我们都要重新开发么？不！那不是 DRY 的风格。采用 Active Record 多态关联（Polymorphic Association）的方式存储各种类型的动作数据，...", topic.description
+    topic = Topic.new(body: "Various systems will always need some functions such as **likes, favorites, follow/subscribe**, etc. more or less.\n\nDo we have to re-development every time? No! That's not the style of DRY. Use Active Record to store various types of action data, such as likes, likes, favorites, follow, subscribe, block (you can do more depending on your imagination) Things) wait.")
+    assert_html_equal "<p>All kinds of systems always need some functions such as <strong>like, favorite, follow/subscribe</strong>, etc. more or less.</p><p>Do we have to re-development every time? No! That's not the style of DRY. Use Active Record to store various types of action data, such as likes, likes, favorites, favorites, follow, subscribe, block (depending on your imagination, you can also do More things) wait.</p>", topic.body_html
+    assert_equal "Various systems will always need more or less likes, favorites, follow/subscribe and other functions. Do we have to re-develop each time? No! That's not the style of DRY. Active Record Polymorphic Association (Polymorphic Association) ) To store various types of action data,...", topic.description
   end
 end
