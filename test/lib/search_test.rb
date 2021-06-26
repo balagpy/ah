@@ -4,10 +4,10 @@ require "test_helper"
 
 class Homeland::SearchText < ActiveSupport::TestCase
   test "initialize" do
-    @search = Homeland::Search.new("(Ruby)语言!")
-    assert_equal ["Ruby", "语言"], @search.terms
-    assert_equal "Ruby 语言", @search.term
-    assert_equal "TO_TSQUERY('simple', 'Ruby:* & 语言:*')", @search.ts_query
+    @search = Homeland::Search.new("(Ruby) language!")
+    assert_equal ["Ruby", "Language"], @search.terms
+    assert_equal "Ruby Language", @search.term
+    assert_equal "TO_TSQUERY('simple', 'Ruby:* & Language:*')", @search.ts_query
   end
 
   test "empty term" do
@@ -17,6 +17,6 @@ class Homeland::SearchText < ActiveSupport::TestCase
   end
 
   test "prepare_data" do
-    assert_equal "Ruby 语言", Homeland::Search.prepare_data("Ruby语言")
+    assert_equal "Ruby Language", Homeland::Search.prepare_data("RubyLanguage")
   end
 end
