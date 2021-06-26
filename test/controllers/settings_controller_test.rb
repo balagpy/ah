@@ -31,7 +31,7 @@ describe SettingsController do
       sign_in user
       get reward_setting_path
       assert_equal 200, response.status
-      assert_equal true, response.body.include?("关于打赏")
+      assert_equal true, response.body.include?("About rewarding")
       assert_equal true, response.body.include?(%(enctype="multipart/form-data"))
     end
   end
@@ -167,7 +167,7 @@ describe SettingsController do
 
       assert_redirected_to account_setting_path
       follow_redirect!
-      assert_select ".alert", text: /账户三方账号登录且未设置 Email 和密码，不允许解绑/
+      assert_select ".alert", text: /Account login with three-party account without setting Email and password, unbinding is not allowed/
     end
   end
 end
