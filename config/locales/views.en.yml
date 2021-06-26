@@ -162,7 +162,7 @@
     recaptcha_key: "Google reCaptcha key"
     recaptcha_secret: "Google reCaptcha secret"
     allow_change_login: "Allow users to change username"
-    twitter_id: "Twitter ID for mention when Twitter shere. For example: homeland (without @)"
+    twitter_id: "Twitter ID for mention when Twitter shere. For example: AskHackers (without @)"
     share_allow_sites: "Social share targets, options [twitter,weibo,facebook,wechat,google_plus,douban,tumblr,pinterest,linkedin,email,reddit,hacker_news]"
     editor_languages: 'Code languages for text editor insert menu. For example: "rb, go, php, js, html"'
     sorted_plugins: 'Plugin order for adjust the navbar menu order. For example: "jobs, wiki, press, site"'
