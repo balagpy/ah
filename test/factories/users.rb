@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :user do
     sequence(:name) { |n| "name#{n}" }
     sequence(:login) { |n| "login#{n}" }
-    sequence(:email) { |n| "email#{n}@gethomeland.com" }
+    sequence(:email) { |n| "email#{n}@askhackers.com" }
     password { "password" }
     password_confirmation { "password" }
     location { "China" }
