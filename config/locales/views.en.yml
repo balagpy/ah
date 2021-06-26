@@ -85,7 +85,7 @@
     auth_with_other_services: "Sign in with other services"
     captcha: "Captcha"
     search_result: "Search results"
-    tips: Tips
+    tips: Bugbounty Tips
     unknow_error: Unknow error, please try out later.
     unknow_user: Unknow user
     block_node: Block node
