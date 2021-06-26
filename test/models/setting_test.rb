@@ -26,11 +26,11 @@ class SettingTest < ActiveSupport::TestCase
   end
 
   test "ban_reasons" do
-    assert_equal ["标题或正文描述不清楚"], Setting.ban_reasons
+    assert_equal ["The title or body description is not clear"], Setting.ban_reasons
   end
 
   test "ban_reason_html" do
-    assert_equal "此贴因内容原因不符合要求，被管理员屏蔽，请根据管理员给出的原因进行调整", Setting.ban_reason_html
+    assert_equal "This post did not meet the requirements due to content reasons and was blocked by the administrator.", Setting.ban_reason_html
   end
 
   test "protocol" do
