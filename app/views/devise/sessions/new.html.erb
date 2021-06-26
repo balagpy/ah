@@ -11,16 +11,16 @@ auth_info = auth_session["info"]
         <div class="card-title"><%= t("common.login") %> <%= Setting.app_name %></div>
         <% if auth_info.present? %>
           <div class="alert">
-            登录 <%= Setting.app_name %> 账号，以绑定 <strong><%= Homeland::Utils.omniauth_name(auth_session["provider"]) %></strong> 三方登录。
+            Log in to the <%= Setting.app_name %> account to bind the <strong><%= Homeland::Utils.omniauth_name(auth_session["provider"]) %></strong> three-party login.
           </div>
         <% end %>
         <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
           <%= render "/shared/error_messages", target: resource %>
           <div class="form-group">
-            <%= f.text_field :login, class: "form-control form-control-lg", placeholder: "用户名 / Email" %>
+            <%= f.text_field :login, class: "form-control form-control-lg", placeholder: "Username / Email" %>
           </div>
           <div class="form-group">
-            <%= f.text_field :password, type: :password, class: "form-control form-control-lg", placeholder: "密码" %>
+            <%= f.text_field :password, type: :password, class: "form-control form-control-lg", placeholder: "Password" %>
           </div>
           <% if devise_mapping.rememberable? -%>
             <div class="form-group">
