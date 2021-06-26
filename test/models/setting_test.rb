@@ -46,20 +46,20 @@ class SettingTest < ActiveSupport::TestCase
     ENV["domain"] = "ruby-china.org"
     assert_equal "ruby-china.org", Setting.safe_domain
 
-    ENV["domain"] = "*.ruby-china.org"
-    assert_equal "ruby-china.org", Setting.safe_domain
+    ENV["domain"] = "*.askhackers.com"
+    assert_equal "askhackers.com", Setting.safe_domain
 
-    ENV["domain"] = "*.ruby-china.org,www.ruby-china.org"
-    assert_equal "ruby-china.org", Setting.safe_domain
+    ENV["domain"] = "*.askhackers.comg,www.askhackers.com"
+    assert_equal "askhackers.comg", Setting.safe_domain
 
-    ENV["domain"] = "www.ruby-china.org,*.ruby-china.org"
-    assert_equal "www.ruby-china.org", Setting.safe_domain
+    ENV["domain"] = "www.askhackers.com,*.askhackers.com"
+    assert_equal "www.askhackers.comg", Setting.safe_domain
   end
 
   test "base_url" do
     Setting.stubs(:domain).returns("homeland.io")
     Setting.stub(:protocol, "https") do
-      assert_equal "https://homeland.io", Setting.base_url
+      assert_equal "https://askhackers.com", Setting.base_url
     end
 
     Rails.env.stub(:development?, true) do
