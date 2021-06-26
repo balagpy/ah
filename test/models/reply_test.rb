@@ -121,8 +121,8 @@ class ReplyTest < ActiveSupport::TestCase
   test "ban words for Reply body" do
     topic = create(:topic)
 
-    Setting.stub(:ban_words_on_reply, %w[mark 顶]) do
-      assert_equal 1, topic.replies.create(body: "顶", user: user).errors[:body].size
+    Setting.stub(:ban_words_on_reply, %w[mark top]) do
+      assert_equal 1, topic.replies.create(body: "top", user: user).errors[:body].size
       assert_equal 1, topic.replies.create(body: "mark", user: user).errors[:body].size
       assert_equal 1, topic.replies.create(body: " mark ", user: user).errors[:body].size
       assert_equal 1, topic.replies.create(body: "MARK", user: user).errors[:body].size
