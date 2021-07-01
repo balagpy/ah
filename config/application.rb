@@ -24,7 +24,7 @@ module Homeland
     config.i18n.load_path += Dir[Rails.root.join("plugins", "*/locales", "*.{rb,yml}").to_s]
     config.i18n.default_locale = "en"
     config.i18n.fallbacks = true
-    config.i18n.available_locales = ["en", "zh-CN"]
+    config.i18n.available_locales = ["en"]
 
     config.autoload_paths += [
       Rails.root.join("lib")
