@@ -88,7 +88,7 @@ window.Editor = Backbone.View.extend({
         return self.restoreUploaderStatus();
       },
       error(res) {
-        App.alert("上传失败");
+        App.alert("Upload failed");
         return self.restoreUploaderStatus();
       },
       complete() {
